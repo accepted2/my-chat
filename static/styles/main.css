@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Значение переменной */
+}
+
+
+body {
+    background-color: rgba(232, 233, 239, 1);
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+
+
+}
+
+#logo {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+}
+
+#form-container {
+    width: 600px;
+
+    box-shadow: var(--shadow);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#welcome-message h1 {
+    font-size: 36px;
+}
+
+#welcome-message p {
+    font-size: 16px;
+}
+
+.form-field {
+    margin: 20px;
+}
+
+.form-field label {
+    font-size: 16px;
+    line-height: 1.7rem;
+}
+
+.form-field input {
+    width: 100%;
+    border: 2px solid rgba(198, 202, 219, 1);
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+.form-field input[type='submit'] {
+    background-color: rgba(75, 93, 172, 1);
+    border: none;
+    color: #fff;
+
+}
+
+@media screen and (max-width: 450px) {
+    #form-container {
+        width: 95%;
+    }
+
+    #welcome-message h1 {
+        font-size: 24px;
+    }
+}
+
+/*  */
+
+
+#video-streams {
+    display: flex;
+    flex-wrap: wrap;
+    /* Элементы переносятся на следующую строку */
+    gap: 10px;
+    /* Пробелы между элементами */
+    justify-content: center;
+    /* Выравнивание по центру */
+
+    height: 85vh;
+    /* Высота равна 85% высоты экрана */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Центрирование по горизонтали */
+    position: relative;
+}
+
+
+.video-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* Вертикальное расположение содержимого */
+    justify-content: center;
+    align-items: center;
+    flex-basis: 400px;
+    /* Ширина контейнера */
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* Позволяет контейнеру уменьшаться */
+    max-width: 100%;
+    /* Контейнер не выйдет за пределы */
+    min-height: 300px;
+    /* Минимальная высота */
+    border: 1px solid rgb(75, 95, 172, 1);
+    border-radius: 5px;
+    margin: 5px;
+    /* Отступы между контейнерами */
+    background-color: rgb(129, 129, 129);
+    overflow: hidden;
+    /* Скрывает лишний контент */
+}
+
+
+@media screen and (max-width: 1650px) {
+    .video-container {
+        flex-basis: 300%;
+        min-height: 200px;
+    }
+
+}
+
+.video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Видео заполняет контейнер, обрезая края */
+    display: block;
+    background-color: black;
+    /* Добавляет фон, если видео не загружено */
+}
+
+.username-wrapper {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff
+}
+
+/* Room Styling */
+#room-name-wrapper {
+    text-align: center;
+    font-size: 18px;
+}
+
+#controls-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    column-gap: 1em;
+    position: absolute;
+    bottom: 70px;
+}
+
+.control-icon {
+    height: 25px;
+    width: 25px;
+    box-shadow: var(--shadow);
+    background-color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+#leave-btn {
+    background-color: rgb(255, 80, 80, 1);
+}
